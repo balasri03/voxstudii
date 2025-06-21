@@ -18,7 +18,7 @@ body {
   z-index: -1;
   background: 
     linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), /* dark overlay */
-    url('C:\Users\n2103\Documents\student-feedback-app\frontend\src\assets\backgroung.png') center center / 110% no-repeat;
+    url('/src/assets/backgroung.png') center center / 110% no-repeat;
     background-blend-mode: darken;
   background-size: cover;
   background-position: center;
