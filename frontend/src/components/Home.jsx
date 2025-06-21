@@ -5,6 +5,8 @@ import axios from './Axios_config';
 
 function Home() {
   const { isAdmin } = useAuth();
+  const [products, setProducts] = useState([]);
+
   useEffect(()=>{
     axios.get(`/home`).then((response) => {
       setProducts(response.data.data);
