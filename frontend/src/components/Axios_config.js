@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 const instance = axios.create({
-  baseURL: 'http://localhost:5000/api', // adjust if your backend runs elsewhere
+  baseURL: import.meta.env.VITE_REACT_APP_BACKEND_URL // adjust if your backend runs elsewhere
 });
 
 export default instance;

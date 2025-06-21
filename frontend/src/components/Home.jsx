@@ -1,8 +1,19 @@
 import { Link } from 'react-router-dom';
 import { useAuth } from '../context/AuthContext';
+import { useEffect } from 'react';
+import axios from './Axios_config';
 
 function Home() {
   const { isAdmin } = useAuth();
+  useEffect(()=>{
+    axios.get(`/home`).then((response) => {
+      setProducts(response.data.data);
+    })
+    .catch((error) => {
+      console.error("There was an error fetching the home data!", error);
+    });
+
+  },[]);
 
   return (
     <div>
