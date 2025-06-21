@@ -16,7 +16,7 @@ export default function AdminLogin() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-    const res = await axios.post('/admin', form); // Your backend expects /api/admin
+    const res = await axios.post('/api/admin', form); // Your backend expects /api/admin
     login(); // Set admin as logged in
     // Store username in localStorage for dashboard use
     localStorage.setItem('adminUsername', form.username);

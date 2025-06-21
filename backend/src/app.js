@@ -5,7 +5,7 @@ import adminloginRouter from './routes/admin_login.router.js'
 
 const app = express()
 app.use(cors({
-  origin: "https://voxstudii-n2tf.vercel.app/", // your Vercel frontend URL
+  origin: "https://voxstudii-n2tf.vercel.app", // your Vercel frontend URL
   credentials: true,
 }));
 
