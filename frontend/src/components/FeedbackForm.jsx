@@ -11,7 +11,7 @@ export default function FeedbackForm() {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    await axios.post('/feedback', form);
+    await axios.post('/api/feedback', form);
     setSubmitted(true);
     setForm({ name: '', category: 'Food', message: '' });
   };

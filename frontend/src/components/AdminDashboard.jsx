@@ -21,7 +21,7 @@ export default function AdminDashboard() {
   const belongsto = localStorage.getItem('adminBelongsto') || adminBelongstoMap[username] || 'Food';
 
   useEffect(() => {
-    axios.get(`/feedback?belongsto=${belongsto}`).then((res) => {
+    axios.get(`/api/feedback?belongsto=${belongsto}`).then((res) => {
       setFeedbacks(res.data);
     });
   }, [belongsto]);
@@ -32,7 +32,7 @@ export default function AdminDashboard() {
   };
 
   const confirmDelete = async () => {
-    await axios.delete(`/feedback/${toDeleteId}`);
+    await axios.delete(`/api/feedback/${toDeleteId}`);
     setFeedbacks(feedbacks.filter((f) => f._id !== toDeleteId));
     setShowPopup(false);
     setToDeleteId(null);
