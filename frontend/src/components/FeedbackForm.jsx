@@ -30,7 +30,9 @@ export default function FeedbackForm() {
         className="w-full p-2 border-white border rounded mb-2 placeholder-white bg-transparent text-white"
         value={form.name}
         onChange={handleChange}
+        autoComplete="Anonmous"
       />
+      <label htmlFor="category" className="text-white">Category</label>
       <select
         name="category"
         className="w-full p-2 border-white border rounded mb-2 bg-transparent text-white"
@@ -50,6 +52,7 @@ export default function FeedbackForm() {
         required
         value={form.message}
         onChange={handleChange}
+        autoComplete="off"
       />
       <button type="submit" className="bg-blue-500 w-full text-white px-4 py-2 rounded hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-400">
         Submit
