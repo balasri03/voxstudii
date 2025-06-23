@@ -47,7 +47,7 @@ async function notifyInactiveAdmins() {
 }
 
 // Run every minute
-cron.schedule('* * * * *', () => {
-    notifyInactiveAdmins().catch(console.error);
-    console.log('Checked for inactive admins at', new Date());
-});
+// cron.schedule('* * * * *', () => {
+//     notifyInactiveAdmins().catch(console.error);
+//     console.log('Checked for inactive admins at', new Date());
+// });
