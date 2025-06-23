@@ -25,7 +25,7 @@ async function sendEmail(to, subject, text) {
 
 async function notifyInactiveAdmins() {
     await mongoose.connect(MONGODB_URI);
-    const threshold = new Date(Date.now() - 7 * 60 * 1000); // 5 minutes ago
+    const threshold = new Date(Date.now() - 7 *24*60* 60 * 1000); // 5 minutes ago
     const inactiveAdmins = await adminLogin.find({
         $or: [
             { lastLogin: { $lt: threshold } },
