@@ -15,3 +15,4 @@ connectDB()
     console.error("Error connecting to the database:", error);
     
 })
+import './utils/notifyInactiveAdmins.js';
