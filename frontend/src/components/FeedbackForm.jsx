@@ -30,14 +30,16 @@ export default function FeedbackForm() {
         className="w-full p-2 border-white border rounded mb-2 placeholder-white bg-transparent text-white"
         value={form.name}
         onChange={handleChange}
-        autoComplete="Anonmous"
+        autoComplete="name"
       />
       <label htmlFor="category" className="text-white">Category</label>
       <select
-        name="category"
-        className="w-full p-2 border-white border rounded mb-2 bg-transparent text-white"
-        value={form.category}
-        onChange={handleChange}
+         id="category"
+  name="category"
+  title="Feedback Category"
+  className="w-full p-2 border-white border rounded mb-2 bg-transparent text-white"
+  value={form.category}
+  onChange={handleChange}
       >
         <option value="Food">Food</option>
         <option value="Academics">Academics</option>
