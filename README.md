@@ -36,11 +36,10 @@ Admins are also notified via email if they haven't logged in within the past 7 d
 
 ## ⚙️ Tech Stack
 
-- **Frontend**: HTML, CSS, JavaScript
-- **Backend**: Flask (Python)
-- **Database**: SQLite
-- **Email Alerts**: `smtplib`
-- **Scheduler**: `APScheduler` (periodic login check)
+- **Frontend**: React + vite , Tailwind
+- **Backend**: NodeJs , Express Js 
+- **Database**: Mongodb 
+- **Email Alerts**: `node mailer`
 
 ---
 
@@ -48,10 +47,16 @@ Admins are also notified via email if they haven't logged in within the past 7 d
 
 ```bash
 voxstudii/
-├── static/                 # CSS, JS, Images
-├── templates/              # HTML files
-├── app.py                  # Main Flask app
-├── scheduler.py            # Email reminder script
-├── utils.py                # Utility functions
-├── database/voxstudii.db   # SQLite database
-└── README.md
+|--- backend
+|    |----controllers
+|    |----models
+|    |----router
+|    |----utils
+|    |----app.js
+|    |----index.js
+|--- frontend
+|    |----src
+|         |----components
+|         |----app.jsx
+|         |----main.jsx
+|         |----app.css    
